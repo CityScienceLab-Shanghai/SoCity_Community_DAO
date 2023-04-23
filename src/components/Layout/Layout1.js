@@ -3,7 +3,7 @@ import React from "react";
 // import Navigation from "../0.2_navigation/Navigation";
 // Assuming the Navigation component is one level up in the folder structure
 import styles from "./Layout1.module.css";
-import Button from "../CustomButtonComponent";
+// import Button from "../CustomButtonComponent";
 
 
 const Layout1 = ({ children }) => {
@@ -11,11 +11,12 @@ const Layout1 = ({ children }) => {
     <div className={styles.layout}>
       <header className={styles.header}>
         <p>header</p>
+        
       </header>
       <aside className={styles.sidebar}>
         <p>sidebar</p>
         
-        <Button 
+        {/* <Button 
           border="none"
           color="pink"
           height = "200px"
@@ -23,7 +24,7 @@ const Layout1 = ({ children }) => {
           radius = "50%"
           width = "200px"
           children = "I'm a pink circle!"
-        />
+        /> */}
 
       </aside>
 
@@ -41,7 +42,8 @@ const Layout1 = ({ children }) => {
       </main>
 
       <footer className={styles.footer}>
-        <p>foot</p>
+        {/* <p>foot</p> */}
+        <img  className={styles.logo}  src={`/lablogo.png`} alt={""} />
       </footer>
 
     </div>

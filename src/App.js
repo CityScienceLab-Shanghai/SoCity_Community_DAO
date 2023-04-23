@@ -3,7 +3,6 @@ import { render } from "react-dom";
 import { stateStore } from "./stores";
 import ResPage from "./components/0.3_resolution/ResPage";
 import Layout1 from './components/Layout/Layout1';
-import { SplitScreen } from "./components/Layout/SplitScreen";
 
 
 const App = () => {
@@ -59,6 +58,7 @@ const App = () => {
         <h5>SoCity Community DAO</h5>
       </div>
       {content[page]} */}
+      
       
     </Layout1>
   );
