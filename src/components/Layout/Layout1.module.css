@@ -1,0 +1,56 @@
+/* Layout.module.css */
+  .layout {
+    display: grid;
+    /* grid-template-columns: auto 1fr; */
+    grid-template-columns: 10% 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+    min-height: 100vh;
+    /* background-color: rgb(26, 21, 21); */
+  }
+  
+  
+  .header {
+    grid-area: header;
+    color:aliceblue;
+    background-color: rgb(180, 174, 174);
+    /* Add your header styles here */
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    color:aliceblue;
+    height: 100%;
+    background-color: rgb(69, 67, 67);
+    /* Add your sidebar styles here */
+  }
+  
+  .mainContent {
+    grid-area: main;
+    color:aliceblue;
+    /* Add your main content styles here */
+  }
+
+  .mainContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color:aliceblue;
+    grid-gap: 0.1rem;
+    padding: 0.1rem;
+  }
+  
+  .mainContent.contentSection {
+    background-color: rgb(162, 152, 152);
+    padding: 0.1rem;
+  }
+  
+  .footer {
+    grid-area: footer;
+    color:aliceblue;
+    background-color: rgb(116, 115, 115);
+    /* Add your footer styles here */
+  }
+  

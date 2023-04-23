@@ -2,13 +2,19 @@ import React, { useEffect, useState } from "react";
 import { render } from "react-dom";
 import { stateStore } from "./stores";
 import ResPage from "./components/0.3_resolution/ResPage";
+import Layout1 from './components/Layout/Layout1';
+import { SplitScreen } from "./components/Layout/SplitScreen";
 
-const CHOARD_DATA_PATH = "/data/chord_data_3.csv";
-const PIE_DATA_PATH = "/data/pie_new@4.csv";
 
 const App = () => {
-  // const { page } = stateStore;
-  const { page } = stateStore;
+
+  const RightHandComponent = () =>{
+    return <p>  Right!</p>;
+  }
+  const LeftHandComponent = () =>{
+    return <p>  Left!</p>;
+  }
+
 
   //responsive design
   const [windowSize, setWindowSize] = useState({
@@ -42,10 +48,19 @@ const App = () => {
   return isMobile ? (
     <ResPage />
   ) : (
-    <div style={{textAlign: "center", fontSize: "32px", color: "white"}}>
-      <h1>SoCity Community DAO</h1>
-      {content[page]}
-    </div>
+    // <div style={{textAlign: "center", fontSize: "32px", color: "white"}}>
+    //   <Navigation />
+    //   <h5>SoCity Community DAO</h5>
+    //   {content[page]}
+    // </div>
+
+    <Layout1 >
+      {/* <div style={{textAlign: "center", fontSize: "32px", color: "white"}}>
+        <h5>SoCity Community DAO</h5>
+      </div>
+      {content[page]} */}
+      
+    </Layout1>
   );
 };
 
